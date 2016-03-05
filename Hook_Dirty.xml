@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<InteractionList>
+  <Interactions>
+    <Interaction>
+      <Name>pick_up_dirty_hook</Name>
+      <Type>Click</Type>
+      <NONETags>has_hook|hold_hook</NONETags>
+      <Text>Swipe upward from the bottom of the screen to pull up your inventory</Text>
+      <GiveTags>pick_hook_tut_finished</GiveTags>
+      <GiveItems>Hook_Dirty</GiveItems> //this goes in the inventory
+      <SpecialActions>Destroy</SpecialActions>
+      <Next>pick_up_dirty_hook_2</Next>
+    </Interaction>
+    <Interaction>
+      <Name>pick_up_dirty_hook_2</Name>
+      <Type>Derivative</Type>
+      <ALLTags>has_hook|hold_hook</ALLTags> //must have these tags
+      <GiveTags>pick_up_dirty_hook_2_finished</GiveTags>
+      <Text>Swipe upward from the bottom of the screen to pull up your inventory</Text>
+      <Next>pick_up_dirty_hook_3</Next>
+    </Interaction>
+    <Interaction>
+      <Name>pick_up_dirty_hook_2</Name>
+      <Type>Derivative</Type>
+      <ALLTags>has_hook|hold_hook</ALLTags>
+      <Next>sadie_forgot_hook</Next> //go modify sadie's xml and put sadie forgot hook in it
+      <NextInteractor>Sadie</NextInteractor>
+    </Interaction>
+    <Interaction>
+      <Name>pick_up_dirty_hook_3</Name>
+      <Type>Click</Type>
+      <ALLTags>has_hook|hold_hook</ALLTags>
+      <GiveTags>pick_up_dirty_hook_3_finished</GiveTags>
+      <Text>Tap on an object in your inventory to examine it further</Text>
+	  <Next>pick_up_dirty_hook_4</Next>
+    </Interaction>
+    <Interaction>
+      <Name>pick_up_dirty_hook_4</Name>
+      <Type>Click</Type>
+      <ALLTags>has_hook|hold_hook</ALLTags>
+      <GiveTags>pick_up_dirty_hook_4_finished</GiveTags>
+      <Text>Swipe downward to close your inventory</Text>
+    </Interaction>
+  </Interactions>
+</InteractionList>
+
+
+
+//attach to both worldobject and inventory object
+
+
